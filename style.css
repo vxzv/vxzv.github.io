@@ -212,13 +212,28 @@ header > .container {
   .heading-primary{
     display: none;
   } 
+  .area_top_view > .container{
+    align-items:center;
+    height: 600px;
+  }
+
 }
 @media screen and (min-width:640px){
   button.burger-btn{
     display: none;
 
   }
+  img.sptop{
+    display: none;
+  }
+
 }
+/*.sptop{
+  z-index: 3;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}*/
 /*トップビュー*/
 .area_top_view{
     background: url(image/top.png) no-repeat bottom center;
