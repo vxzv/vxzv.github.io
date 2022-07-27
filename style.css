@@ -205,6 +205,17 @@ header > .container {
     color:#000;
     border:1px solid #000;
 }
+img.sptop{
+  z-index: 3;
+  position: absolute;
+  width:70%;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 @media screen and (max-width:640px){
   .nav_header{
     display: none;
@@ -214,7 +225,12 @@ header > .container {
   } 
   .area_top_view > .container{
     align-items:center;
-    height: 600px;
+  }
+  .area_logo_header{
+    display:none;
+  }
+  div.footer-top{
+    display:none;
   }
 
 }
@@ -228,12 +244,7 @@ header > .container {
   }
 
 }
-/*.sptop{
-  z-index: 3;
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
-}*/
+
 /*トップビュー*/
 .area_top_view{
     background: url(image/top.png) no-repeat bottom center;
@@ -281,8 +292,9 @@ button {
   width: 39px;      
   height: 39px;      
   position: absolute;   
+  top:30%;
   right:5%;   
-  z-index: 3;
+  z-index: 10;
   border:none;   
 }    
 .bar{      
@@ -326,13 +338,13 @@ transition: transform .3s;
     top: 0;      
     left: 0;
     transition: all .5s;       
-    z-index: 2;     
+    z-index: 10;     
   }     
   .header-nav{        
     width: 100%;        
     height: 100%;        
     background-color:rgba(0, 0, 0, 0.85);        
-    z-index: 2;      
+    z-index: 10;      
   }     
   .nav-list{        
     display: block;        
@@ -389,7 +401,7 @@ transition: transform .3s;
     left: -15px;
     top: -15px;
     /*テキストの形状*/
-    color:#eee;
+    color:#818181;
     font-size:0.7rem;
     letter-spacing: 0.05em;
 }
@@ -402,7 +414,7 @@ transition: transform .3s;
     /*線の形状*/
     width:1px;
     height:30px;
-    background:#eee;
+    background:#818181;
     /*線の動き1.4秒かけて動く。永遠にループ*/
     animation:pathmove 1.4s ease-in-out infinite;
     opacity:0;
@@ -652,13 +664,33 @@ a.card-link {
   text-decoration: underline;
 }
 /*footer-bottom*/
+/* トップへ戻るボタン */
+.page_top_btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  padding: 0.7em;
+  text-align: center;
+  border: 1px solid #fff;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  transition: 0.3s0;
+}
 
+/* マウスオーバー時 */
+.page_top_btn:hover {
+  background: rgb(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255, 0.8);
+}
+/*
 #page-top a img{
   size:80%;
 }
 #page-top a img:hover{
   opacity: 0.8;
-}
+}*/
+
 /*リンクを右下に固定*/
 #page-top {
 	position: fixed;
@@ -701,6 +733,7 @@ a.card-link {
 	transform: translateY(120px);
   }
 }
+
 .copyright{
     color:#eee;
     background:#000;
