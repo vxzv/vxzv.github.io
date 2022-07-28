@@ -568,8 +568,8 @@ div.text_home_sp{
   position:absolute;
   z-index:4;
   top:250px;
-  left:-50px;
-  width:500px;
+  left:0px;
+  width:100%;
   background:(255,255,255,0);
   padding:50px;
   /*box-shadow:0 0 5px #999;*/
