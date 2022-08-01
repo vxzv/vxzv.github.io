@@ -462,12 +462,14 @@ transition: transform .3s;
     display:flex;
     justify-content: center;
     padding:50px 0 0 0;
+    
 }
 .head_home .ttl{
     font-size: 1.8em;
     padding:0 0 15px;
     position: relative;
     color: #000;
+    font-family: 'Roboto Slab', sans-serif; 
 }
 /*2分割レイアウト
 .layout_2_div{
@@ -560,18 +562,17 @@ div.text_home_sp{
 .text_home_sp{
   position: relative;
   width:100%;
-  height: 700px;
+  height:550px;
   background:#fff;
   /*border:1px solid #000;*/
 }
 .text_home_sp img{
   position:absolute;
-  bottom:55%;
-  left:0%;
-  width: 90%;
+  top:45%;
+  width: 100%;
   z-index: 5;
-  max-height:45%;
-  max-width:90%;
+  /*max-height:45%;
+  max-width:90%;*/
 }
 /*.text_home_sp > .about_box{
   position:absolute;
@@ -585,11 +586,9 @@ div.text_home_sp{
 .text_home_sp p{
   position:absolute;
   bottom:0%;
-  left:5% ;
   width:100%;
-  height:80%;
-  background:#f0f0f0;
-  padding:50px,0,0,0;
+  height:100%;
+  background:#fff;
   /*box-shadow:0 0 5px #999;*/
   font-size:1em;
   line-height:24px;
@@ -605,7 +604,7 @@ div.text_home_sp{
 
 .text_home_sp > p.aboutus2{
   color: #333;
-  padding-top: 200px;
+  padding-top: 32px;
   text-align: center;
   font-size: 1.0em;
   text-shadow:none;
