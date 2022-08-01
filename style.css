@@ -444,7 +444,7 @@ transition: transform .3s;
 
 /*about us*/
 .area_home_about > .container{
-    height: 650px;
+    /*height: 650px;*/
     display:flex;
     flex-direction: column;
     align-items: center;
