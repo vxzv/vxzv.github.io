@@ -237,20 +237,26 @@ img.sptop{
   z-index: 3;
   position: absolute;
   width:75%;
+  max-height: 650px;
   top:0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
+
 }
 
-@media screen and (max-width:640px){
+
+@media screen and (max-width:768px){
   .nav_header{
     display: none;
   }
   .heading-primary{
     display: none;
   } 
+  .heading-secondary{
+    display: none;
+  }
   .area_top_view > .container{
     align-items:center;
   }
@@ -262,10 +268,33 @@ img.sptop{
   }
 
 }
-@media screen and (min-width:640px){
+@media screen and (min-width:768px) and (max-width:992px){
+
+  .heading-primary{
+    display: none;
+  } 
+  .area_top_view > .container{
+    align-items:center;
+  }
+
+  div.footer-top{
+    display:none;
+  }
+  button.burger-btn{
+    display: none;
+  }
+  img.sptop{
+    display: none;
+  }
+  
+}
+@media screen and (min-width:992px){
   button.burger-btn{
     display: none;
 
+  }
+  .heading-secondary{
+    display:none;
   }
   img.sptop{
     display: none;
@@ -292,7 +321,17 @@ img.sptop{
   font-family: 'Roboto Slab', sans-serif; 
 
 }
+.heading-secondary{
+  font-size: 50px;
+  color:#fff;
+  text-shadow: 1px 1px 0px #000; 
+  font-family: 'Roboto Slab', sans-serif; 
+
+}
 .typed{
+  white-space: pre;
+}
+.typed2{
   white-space: pre;
 }
 .portfolio_top_view{
@@ -548,6 +587,7 @@ scroll_up ｜下から上へ出現
   left:5%;
   width: 48%;
   z-index: 5;
+
 }
 .text_home > .about_box{
   position:absolute;
@@ -577,7 +617,7 @@ scroll_up ｜下から上へ出現
   color: #333;
   text-align: center;
   font-size: 1.2em;
-  padding:1.4em 0 1.4em 0;
+  padding:0;
   text-shadow:none;
   font-family: sans-serif;
 }
@@ -590,11 +630,11 @@ scroll_up ｜下から上へ出現
   font-family: sans-serif;
 }
 
-@media screen and (max-width:640px){
+@media screen and (max-width:768px){
 div.text_home{
     display: none;
   }}
-@media screen and (min-width:640px){
+@media screen and (min-width:768px){
 div.text_home_sp{
     display: none;
       }}
@@ -608,9 +648,14 @@ div.text_home_sp{
 }
 .text_home_sp img{
   position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
   top:45%;
   width: 100%;
   z-index: 5;
+  max-width: 412px;
+  max-height: 635px;
   /*max-height:45%;
   max-width:90%;*/
 }
@@ -789,7 +834,7 @@ a.card-link {
 }
 .gyokushoukai a{
   color:#eee;
-  font-size:18px;
+  font-size:14px;
   padding: 25px 0 0 80px;
   text-decoration: none;
   font-family: sans-serif;
@@ -849,7 +894,7 @@ a.card-link {
 #page-top {
 	position: fixed;
 	right: 20px;
-	bottom:20px;
+	bottom:30px;
 	z-index: 2;
     /*はじめは非表示*/
 	opacity: 0;
