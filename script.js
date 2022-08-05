@@ -28,6 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+	var typed = new Typed('.typed2', {
+	  strings: ['GYOKUSHOUKAI × \nInformation Technology × \nDigital Transformation Club'],
+	  typeSpeed: 85, //数字が小さいほど早い
+	  startDelay:2000,
+	});
+  });
   //page link
   $('a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
 	var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
