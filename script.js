@@ -19,6 +19,23 @@ $(window).on('load',function(){
     //=====ここまで背景が伸びた後に動かしたいJSをまとめる
         
 });
+//ヘッダー色変える
+var _window = $(window),
+    _header = $('header'),
+    heroBottom;
+ 
+_window.on('scroll',function(){
+    heroBottom = $('.area_top_view').height();
+	const active = heroBottom - 50;
+    if(_window.scrollTop() > active ){
+        _header.addClass('transform');   
+    }
+    else{
+        _header.removeClass('transform');   
+    }
+});
+ 
+_window.trigger('scroll');
 
 document.addEventListener('DOMContentLoaded', function () {
 	var typed = new Typed('.typed', {
@@ -38,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //page link
   $('a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
 	var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
-	var pos = $(elmHash).offset().top;	//idの上部の距離を取得
+	var pos = $(elmHash).offset().top - 20;	//idの上部の距離を取得
 	$('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
 	return false;
 });
