@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-/*body{
-  : url(image/body.png) no-repeat bottom center;
-}*/
+body{
+  background-color: #fff;
+}
 /*========= ローディング画面のためのCSS ===============*/
 #splash {
     position: fixed;
@@ -316,6 +316,18 @@ img.sptop{
 }
 
 /*トップビュー*/
+.container2{
+  position:relative;
+  width:100%;
+  /*heightはscript.jsで要素の高さを合わせた*/
+}
+#particles-background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 .area_top_view{
     background: url(image/top.png) no-repeat bottom center;
     background-size: cover;
@@ -445,7 +457,7 @@ transition: transform .3s;
     top: 50%;        
     left: 50%;        
     transform: translate(-50%,-50%);        
-    text-align: center;      
+    text-align: center;     
   }      
   .nav-item{        
     margin-right: 0;        
@@ -545,8 +557,9 @@ transition: transform .3s;
 }
 .area_home_about{
     /*background: url(image/aboutus.png) no-repeat bottom center;*/
-    background-color: rgba(255,255,255);
+    background-color:rgba(255,255,255);
     background-size: cover;
+    
 }
 
 
@@ -592,8 +605,7 @@ scroll_up ｜下から上へ出現
   position: relative;
   width:100%;
   height: 600px;
-  background:#fff;
-  /*border:1px solid #000;*/
+  background:rgba(255,255,255,0);
 }
 .text_home img{
   position:absolute;
@@ -611,6 +623,7 @@ scroll_up ｜下から上へ出現
   z-index:3;
   top:15%;
   left:15%;
+  border:1px solid #000;
 }
 .text_home p{
   position:absolute;
