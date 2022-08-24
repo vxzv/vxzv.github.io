@@ -474,6 +474,7 @@ transition: transform .3s;
   }
   .noscroll{
     overflow: hidden;
+　　height: 100%;
   }
 /*タイピングアニメーション
 .TextTyping span{
